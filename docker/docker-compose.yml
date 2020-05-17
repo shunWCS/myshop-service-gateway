@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  myshop-service-gatewa:
+    restart: always
+    image: myshop-service-gateway
+    container_name: myshop-service-gateway
+    ports:
+      - 9000:9000
+    networks:
+      - gateway_network
+
+networks:
+  gateway_network:
